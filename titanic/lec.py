@@ -83,4 +83,22 @@ from sklearn.metrics import roc_auc_score, roc_curve # y_true, y_score
 # 회귀는 코딩 지금까지 타이타닉 한 거에서 모델만 바꾸면 됨.
 
 -------
-from sklearn
+from sklearn.metrics import precision_score, recall_score, f1_score
+from sklearn.metrics import roc_auc_score, roc_curve
+
+1차 점수 보기
+2차 gridCV 튜닝
+
+pd.Series.to_dict()
+
+pd.Series.
+
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import GridSearchCV
+
+from imblearn.over_sampling import SMOTE
+
+SMOTE
+
