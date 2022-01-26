@@ -102,3 +102,11 @@ from imblearn.over_sampling import SMOTE
 
 SMOTE
 
+import xgboost as xgb
+
+xgb.DMatrix
+
+xgb.train
+
+from sklearn.ensemble import BaggingClassifier
+BaggingClassifier.
