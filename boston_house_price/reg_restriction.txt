@@ -1,0 +1,72 @@
+<pre>
+<b><font color=red>
+class sklearn.linear_model.LinearRegression</b>(*,                    fit_intercept=True, normalize='deprecated',                   copy_X=True, n_jobs=None,                                 positive=False)
+<b><font color=red>
+class sklearn.linear_model.Lasso</b>(alpha=1.0, *,                    fit_intercept=True, normalize='deprecated', precompute=False, copy_X=True, max_iter=1000, tol=0.0001, warm_start=False, positive=False, random_state=None, selection='cyclic')
+<b><font color=red>
+class sklearn.linear_model.ElasticNet</b>(alpha=1.0, *, l1_ratio=0.5, fit_intercept=True, normalize='deprecated', precompute=False, copy_X=True, max_iter=1000, tol=0.0001, warm_start=False, positive=False, random_state=None, selection='cyclic')
+<b><font color=red>
+class sklearn.linear_model.Ridge</b>(alpha=1.0, *,                    fit_intercept=True, normalize='deprecated',                   copy_X=True, max_iter=None, tol=0.001,     solver='auto', positive=False, random_state=None)
+
+https://velog.io/@sset2323/05-08.-%ED%9A%8C%EA%B7%80-%ED%8A%B8%EB%A6%AC
+
+<b> <font color='red'>
+Scikit-Learn Wrapper interface for XGBoost.                      
+#---------------  :: feature_importances_, feature_name_,  evals_result(), intercept_, coef_ 
+class xgboost.XGBRegressor(*, objective='reg:squarederror', **kwargs) </b>
+        max_depth: Optional[int] = None,
+        learning_rate: Optional[float] = None,                   #---------(3)None
+        n_estimators: int = 100,                                 #------------Default: 100
+        verbosity: Optional[int] = None,
+        objective: _SklObjective = None,                         #---------(2)목적함수/평가메트릭
+        booster: Optional[str] = None,                           #---------(1)gbtree, gblinear or dart.
+        tree_method: Optional[str] = None,
+        n_jobs: Optional[int] = None,
+        gamma: Optional[float] = None,
+        min_child_weight: Optional[float] = None,
+        max_delta_step: Optional[float] = None,
+        subsample: Optional[float] = None,
+        colsample_bytree: Optional[float] = None,
+        colsample_bylevel: Optional[float] = None,
+        colsample_bynode: Optional[float] = None,
+        reg_alpha: Optional[float] = None,                      #---------(4)L1 regularization
+        reg_lambda: Optional[float] = None,                     #---------(4)L2 regularization
+        scale_pos_weight: Optional[float] = None,               #---------Balancing of positive and negative weights.
+        base_score: Optional[float] = None,
+        random_state: Optional[Union[np.random.RandomState, int]] = None,  #---------------
+
+        missing: float = np.nan,
+        num_parallel_tree: Optional[int] = None,
+        monotone_constraints: Optional[Union[Dict[str, int], str]] = None,
+        interaction_constraints: Optional[Union[str, List[Tuple[str]]]] = None,    #---------(“gain”, “weight”, “cover”, “total_gain” , “total_cover”.)
+        importance_type: Optional[str] = None,                  #------For linear model, only “weight” (normalized coefficients without bias.)
+        gpu_id: Optional[int] = None,
+        validate_parameters: Optional[bool] = None,
+        predictor: Optional[str] = None,
+        enable_categorical: bool = False,
+        
+<b> <font color='red'>     
+Scikit-Learn Wrapper interface for LGBMRegressor.  
+#---------------  :: feature_importances_, feature_name_, evals_result_, best_score_
+class lightgbm.LGBMRegressor(*args, **kwargs)  </b>
+        boosting_type: str = 'gbdt',
+        num_leaves: int = 31,
+        max_depth: int = -1,
+        learning_rate: float = 0.1,                        #------------Default: 0.1 
+        n_estimators: int = 100,                           #------------Default: 100
+        subsample_for_bin: int = 200000,
+        objective: Optional[Union[str, Callable]] = None,  #------------Default: ‘regression’ 
+        class_weight: Optional[Union[Dict, str]] = None,
+        min_split_gain: float = 0.,
+        min_child_weight: float = 1e-3,
+        min_child_samples: int = 20,
+        subsample: float = 1.,
+        subsample_freq: int = 0,
+        colsample_bytree: float = 1.,
+        reg_alpha: float = 0.,                            #---------L1 regularization
+        reg_lambda: float = 0.,                           #---------L2 regularization
+        random_state: Optional[Union[int, np.random.RandomState]] = None,
+        n_jobs: int = -1,
+        silent: Union[bool, str] = 'warn',
+        importance_type: str = 'split',                   #---------split/gain
+        
