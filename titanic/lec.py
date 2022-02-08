@@ -112,4 +112,15 @@ from sklearn.ensemble import BaggingClassifier
 BaggingClassifier.
 np.concatenate
 
-np.logju
+import pandas as pd
+pd.read_csv()
+
+pd.Series.str.extract()
+
+pd.DataFrame.replace
+
+from datetime import datetime as dt
+
+dt.strptime
+
+DataFrame.set_index
