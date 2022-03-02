@@ -124,3 +124,9 @@ from datetime import datetime as dt
 dt.strptime
 
 DataFrame.set_index
+
+import requests
+
+requests.get()
+
+requests.post()
